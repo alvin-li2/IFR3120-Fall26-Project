@@ -1,0 +1,39 @@
+<%- include('../partials/header.ejs') %>
+<%- include('../partials/navbar.ejs') %>
+
+<!-- responsible for editing information from the database-->
+<div class="container">
+    <div class="row">
+        <div class="offset-md-3 col-md-6">
+            <h1><%= title %></h1>
+            <form class="form" method="post">
+                <div class="form-group">
+                    <label for="nameTextField">Product</label>
+                    <input type="text" class="form-control" id="nameTextField"
+                        placeholder="Enter the Title of the product" name="name" 
+                        value="<%= Product.name %>" required>
+                </div>
+                <div class="form-group">
+                    <label for="descriptionTextField">Description</label>
+                    <textarea type="text" class="form-control" id="descriptionTextField"
+                        placeholder="Enter the Description of the product" name="description"
+                        required><%= Product.description %></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="priceTextField">Price</label>
+                    <input type="number" step="0.01" class="form-control" id="priceTextField"
+                        placeholder="Enter the Price of the product" name="price" 
+                        value="<%= Product.price %>" required>
+                </div> <br>
+                <button class="btn btn-primary" type="submit">
+                    <i class="fas fa-edit"></i> Submit
+                </button>
+                <a href="/product" class="btn btn-warning">
+                    <i class="fas fa-undo"></i> Cancel
+                </a>
+            </form>
+        </div>
+    </div>
+</div>
+
+<%- include('../partials/footer.ejs') %>

@@ -5,8 +5,7 @@ let mongoose = require('mongoose');
 // Connect Router to Model
 let Product = require('../models/product');
 
-/* Read Operation */
-
+/* READ Operation */
 router.get('/',async(req,res,next) => {
     try {
         const Productlist = await Product.find();
@@ -14,8 +13,7 @@ router.get('/',async(req,res,next) => {
             title:'Products',
             Productlist:Productlist
         })
-    }
-    catch(err){
+    } catch(err) {
         console.log(err);
         res.render('Products/list',{
             error:'Error on Server'
@@ -23,17 +21,14 @@ router.get('/',async(req,res,next) => {
     }
 })
 
-/* Create Operation */
-//get operation (gets info)
+/* CREATE Operation */
 router.get('/add', async(req,res,next)=>{
-    try{
+    try {
         res.render('Products/add',{
             title:'Add Product'
         });
 
-    }
-    catch(err)
-    {
+    } catch(err) {
         console.log(err);
         res.render('Products/add',{
             error:'Error on Server'
@@ -41,10 +36,72 @@ router.get('/add', async(req,res,next)=>{
     }
         
 });
-//post operatio (posts info)
-//*router.post('/add', async(req,res,next)=>{});*/
-/* Update Operation */
+router.post('/add', async(req,res,next)=>{
+    try {
+        let newProduct = Product({
+            "name": req.body.name,
+            "description": req.body.description,
+            "price": req.body.price
+        });
+        Product.create(newProduct).then(()=>{
+            res.redirect('/product')
+        });
+    } catch(err) {
+        console.error(err);
+        res.render('Products/list', {
+            error: 'Error on Server'
+        })
+    }
+});
 
-/* Delete Operation */
+/* UPDATE Operation */
+router.get('/edit/:id', async(req,res,next)=>{
+    try {
+        const id = req.params.id;
+        const productToEdit = await Product.findById(id);
+        res.render('Products/edit',{
+            title:'Edit Product',
+            Product: productToEdit
+        });
+    } catch(err) {
+        console.log(err);
+        next(err);
+    }    
+});
+router.post('/edit/:id', async(req,res,next)=>{
+    try {
+        let id = req.params.id;
+        let updatedProduct = Product({
+            "_id":id,
+            "name": req.body.name,
+            "description": req.body.description,
+            "price": req.body.price
+        })
+        Product.findByIdAndUpdate(id, updatedProduct).then(()=>{
+            res.redirect('/product')
+        })
+    } catch(err) {
+        console.error(err);
+        res.render('Products/list', {
+            error:'Error on Server'
+        })
+    }
+});
+
+/* DELETE Operation */
+router.get('/delete/:id', async(req,res,next)=>{
+    try {
+        let id = req.params.id;        
+        Product.deleteOne({_id:id}).then(()=>{
+            res.redirect('/product')
+        })
+    } catch(err) {
+        console.error(err);
+        res.render('Products/list', {
+            error:'Error on Server'
+        })
+    }
+});
+
 
 module.exports = router;

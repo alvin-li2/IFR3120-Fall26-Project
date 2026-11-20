@@ -1,4 +1,12 @@
 # INFR3120_Fall2026_Project Log
+## v0.2.0 by Marcus Pasco
+### Added
+- More database connection operations (All CRUD operations) --> **Stil only local database**
+- Introduced fontawesom and included some icons
+
+### Improvements
+- Fixed problem with logo not showing on header/footer
+
 ## v0.1.2 by Alvin Li
 ### Added
 - Added navigation to add product 
