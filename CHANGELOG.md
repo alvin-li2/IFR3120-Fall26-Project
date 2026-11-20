@@ -1,4 +1,21 @@
 # INFR3120_Fall2026_Project Log
+## v0.1.2 by Alvin Li
+### Added
+- Added navigation to add product 
+- Added or function with navbar to load Browse Products page even when on the add part
+- Added text to home page as well as redirect to login
+
+### Improvements
+- Fixed navbar not focusing when on Browse Products page due to incorrect naming
+- Changed input type to numbers on "price" functionality in add product page
+- Changed footer to reflect company name with logo
+- Made it so when "Home Hub" button was pressed it sends user to home page (originally did nothing)
+
+## v0.1.1 by Aksayan Nirmalan
+### Added
+- Add page to products
+- Created logo and company name 
+
 ## v0.1.0 by Marcus Pasco
 ### Added
 - Configuration for database connections (connecting and read function only) --> **Only local database though**

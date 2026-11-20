@@ -6,6 +6,7 @@ let mongoose = require('mongoose');
 let Product = require('../models/product');
 
 /* Read Operation */
+
 router.get('/',async(req,res,next) => {
     try {
         const Productlist = await Product.find();
@@ -23,7 +24,25 @@ router.get('/',async(req,res,next) => {
 })
 
 /* Create Operation */
+//get operation (gets info)
+router.get('/add', async(req,res,next)=>{
+    try{
+        res.render('Products/add',{
+            title:'Add Product'
+        });
 
+    }
+    catch(err)
+    {
+        console.log(err);
+        res.render('Products/add',{
+            error:'Error on Server'
+        })
+    }
+        
+});
+//post operatio (posts info)
+//*router.post('/add', async(req,res,next)=>{});*/
 /* Update Operation */
 
 /* Delete Operation */

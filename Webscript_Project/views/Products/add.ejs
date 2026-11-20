@@ -1,0 +1,32 @@
+<%- include('../partials/header.ejs') %>
+    <%- include('../partials/navbar.ejs') %>
+        <!-- responsible for adding information to the database-->
+        <div class="container">
+            <div class="row">
+                <div class="offset-md-3 col-md-6">
+                    <h1>
+                        <%= title %>
+                    </h1>
+                    <a href="/product">Return to Browsing</a>
+                    <form class="form" method="post">
+                        <div class="form-group">
+                            <label for="nameTextField">Product Title</label>
+                            <input type="text" class="form-control" id="nameTextField"
+                                placeholder="Enter the Title of the product" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="description">Description</label>
+                            <textarea type="text" class="form-control" id="descriptionTextField"
+                                placeholder="Enter the Description of the product" name="description"
+                                required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="price">Price ($)</label>
+                            <input type="number" class="form-control" id="priceTextField"
+                                placeholder="Enter the Price of the product" name="price" required>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <%- include('../partials/footer.ejs') %>

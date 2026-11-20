@@ -16,11 +16,4 @@ router.get('/login', function(req, res, next) {
   res.render('login', { title: 'Login Page' });
 });
 
-/* GET browse page */
-router.get('/browse', function(req, res, next) {
-  res.render('browse', { title: 'Browsing Page' });
-});
-
-
-
 module.exports = router;
