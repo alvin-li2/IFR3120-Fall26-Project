@@ -1,4 +1,12 @@
 # INFR3120_Fall2026_Project Log
+## v0.1.0 by Marcus Pasco
+### Added
+- Configuration for database connections (connecting and read function only) --> **Only local database though**
+
+### Improvements
+- Rearranged and renamed files/folders to have a cleaner project
+- Fixed some errors regarding file pathing
+
 ## v0.0.3 by Alvin Li
 ### Added
 - Routes: modified homepage to be / instead of /home in order to load by default

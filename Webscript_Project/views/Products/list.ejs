@@ -1,0 +1,29 @@
+<%- include('../partials/header.ejs') %>
+<%- include('../partials/navbar.ejs') %>
+
+<main class="container">
+    <div class="row">
+        <div class="offset-md-1 col-md-10">
+            <h1><%= title %></h1>
+            <br>
+            <table class="table table-bordered table-striped table-hover">
+                <!-- Header Row -->
+                <tr>
+                    <th class="text-center col-2">Name</th>
+                    <th class="text-center col-4">Description</th>
+                    <th class="text-center col-1">Price</th>
+                </tr>
+                <!-- Columns -->
+                <% for(let count=0; count<Productlist.length;count++) { %>
+                    <tr>
+                        <td class="text-center col-2"><%= Productlist[count].name %></td>
+                        <td class="text-center col-4"><%= Productlist[count].description %></td>
+                        <td class="text-center col-1"><%= Productlist[count].price %></td>
+                    </tr>
+                <% } %>
+            </table>
+        </div>
+    </div>
+</main>
+
+<%- include('../partials/footer.ejs') %>
