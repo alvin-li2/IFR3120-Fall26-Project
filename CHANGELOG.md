@@ -1,4 +1,21 @@
 # INFR3120_Fall2026_Project Log
+## v0.0.3 by Alvin Li
+### Added
+- Routes: modified homepage to be / instead of /home in order to load by default
+- Basic checkout page that collects information and emails it to fulfillment (placeholder email currently)
+- Browsing page and route that maps to it
+
+### Improvements
+- Navbar: added if/else statements to only load page user is active on
+- Removed duplicate login page routing in index.js
+
+## v0.0.2 by Aksayan Nirmalan
+### Added
+- created view ejs for login, checkout and partial view for navbar
+Mark Otto, J. T. (n.d.). Navbar. · Bootstrap v5.0. https://getbootstrap.com/docs/5.0/components/navbar/ 
+
+### Improvements
+
 ## v0.0.1 by Marcus Pasco
 ### Added
 - Ejs files: unified header & footer and home page format
@@ -10,3 +27,4 @@
 - Generated the expreess-generator skeleton format
 
 ### Improvements
+
