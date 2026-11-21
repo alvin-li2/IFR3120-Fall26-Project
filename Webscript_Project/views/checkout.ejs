@@ -2,11 +2,13 @@
   <%- include('partials/navbar.ejs') %>
 
     <article>
-      <h1>
-        <%= title %>
-      </h1>
+      <h1><%= title %></h1>
       <div>
-        <form action="mailto:fulfillments@thecompanyname.ca?subject=New Order Placed" method="post" enctype="text/plain"
+        <h3><%= Product.name %></h3>
+        <p>Price: $<%= Product.price %></p>
+      </div>
+      <div>
+        <form action="/confirmation" method="post" enctype="text/plain"
           name="newOrder">
           <p>
             <label for="firstName">Enter your First Name</label>

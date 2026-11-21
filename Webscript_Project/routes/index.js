@@ -7,8 +7,8 @@ router.get('/', function(req, res, next) {
 });
 
 /* GET checkout page*/
-router.get('/checkout', function(req, res, next) {
-  res.render('checkout', { title: 'Check Out' });
+router.post('/confirmation', function(req, res, next) {
+  res.render('confirmation', { title: 'Confirmed Order' });
 });
 
 /* GET login page*/

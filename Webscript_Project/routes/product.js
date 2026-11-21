@@ -32,7 +32,7 @@ router.get('/add', async(req,res,next)=>{
         console.log(err);
         res.render('Products/add',{
             error:'Error on Server'
-        })
+        });
     }
         
 });
@@ -50,7 +50,7 @@ router.post('/add', async(req,res,next)=>{
         console.error(err);
         res.render('Products/list', {
             error: 'Error on Server'
-        })
+        });
     }
 });
 
@@ -84,7 +84,7 @@ router.post('/edit/:id', async(req,res,next)=>{
         console.error(err);
         res.render('Products/list', {
             error:'Error on Server'
-        })
+        });
     }
 });
 
@@ -102,6 +102,5 @@ router.get('/delete/:id', async(req,res,next)=>{
         })
     }
 });
-
 
 module.exports = router;

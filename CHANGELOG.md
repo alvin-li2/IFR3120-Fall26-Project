@@ -1,4 +1,13 @@
 # INFR3120_Fall2026_Project Log
+## v0.3.0 by Marcus Pasco
+### Added
+- "Functional" check out where users "buy" the product (nothing really happens just simulation)
+- README.md file pertaining external code usage
+
+### Improvements
+- Removed checkout button on nav bar
+- Removed uneccessary zip files from project folder
+
 ## v0.2.0 by Marcus Pasco
 ### Added
 - More database connection operations (All CRUD operations) --> **Stil only local database**
