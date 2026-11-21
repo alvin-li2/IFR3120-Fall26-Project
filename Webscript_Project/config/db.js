@@ -1,1 +1,3 @@
-module.exports={"URI":"mongodb://localhost:27017/bookStore"}
+module.exports = {
+    URI: process.env.database_key
+}
