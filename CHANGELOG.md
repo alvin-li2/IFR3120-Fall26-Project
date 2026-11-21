@@ -1,4 +1,8 @@
 # INFR3120_Fall2026_Project Log
+## v0.3.1 by Alvin Li
+### Improvements
+- Removed unneccessary ejs file in views 
+
 ## v0.3.0 by Marcus Pasco
 ### Added
 - "Functional" check out where users "buy" the product (nothing really happens just simulation)
